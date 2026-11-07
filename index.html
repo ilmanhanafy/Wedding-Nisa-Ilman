@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wedding of Nisa &amp; Ilman</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- A. COVER -->
+<section class="cover" id="cover">
+  <!-- Ilustrasi taman: pohon, gunung, gazebo, angsa (SVG buatan sendiri, bisa diedit warnanya) -->
+  <svg class="scene" viewBox="0 0 360 640" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdf1f1"/><stop offset="1" stop-color="#f2c9d0"/></linearGradient></defs>
+    <rect width="360" height="640" fill="url(#sky)" opacity=".7"/>
+    <path d="M0 360 L70 270 L130 330 L200 230 L270 320 L320 280 L360 330 V470 H0Z" fill="#e5aab6" opacity=".85"/>
+    <path d="M0 400 L90 335 L170 390 L250 325 L360 390 V480 H0Z" fill="#d78f9e" opacity=".8"/>
+    <rect y="480" width="360" height="160" fill="#d5e4ea"/>
+    <g class="gazebo">
+      <ellipse cx="180" cy="330" rx="52" ry="32" fill="#cfe3e0"/>
+      <rect x="100" y="352" width="160" height="10" rx="3" fill="#f0dfc8"/>
+      <rect x="112" y="362" width="9" height="95" fill="#efe0cc"/><rect x="152" y="362" width="9" height="95" fill="#efe0cc"/>
+      <rect x="199" y="362" width="9" height="95" fill="#efe0cc"/><rect x="239" y="362" width="9" height="95" fill="#efe0cc"/>
+      <rect x="95" y="457" width="170" height="12" rx="3" fill="#e8d5bb"/>
+    </g>
+    <g class="swan s1"><ellipse cx="110" cy="545" rx="24" ry="10" fill="#fff"/><path d="M130 541 q12 -22 2 -34" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="133" cy="505" r="5" fill="#fff"/></g>
+    <g class="swan s2"><ellipse cx="250" cy="580" rx="24" ry="10" fill="#fff"/><path d="M230 576 q-12 -22 -2 -34" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="227" cy="540" r="5" fill="#fff"/></g>
+    <g class="tree-l"><g class="sway"><rect x="22" y="290" width="14" height="260" fill="#8a6a5a"/>
+      <circle cx="28" cy="255" r="58" fill="#8fae92"/><circle cx="-6" cy="335" r="50" fill="#e59aa9"/><circle cx="62" cy="345" r="44" fill="#9db89f"/><circle cx="10" cy="410" r="46" fill="#e8a6b3"/></g></g>
+    <g class="tree-r"><g class="sway sw2"><rect x="324" y="290" width="14" height="260" fill="#8a6a5a"/>
+      <circle cx="332" cy="250" r="58" fill="#e59aa9"/><circle cx="366" cy="335" r="50" fill="#8fae92"/><circle cx="298" cy="345" r="44" fill="#9db89f"/><circle cx="350" cy="410" r="46" fill="#e8a6b3"/></g></g>
+    <g><circle cx="20" cy="620" r="34" fill="#c9606f"/><circle cx="70" cy="632" r="30" fill="#e8a6b3"/><circle cx="125" cy="640" r="26" fill="#8fae92"/><circle cx="240" cy="640" r="26" fill="#8fae92"/><circle cx="295" cy="632" r="30" fill="#e8a6b3"/><circle cx="342" cy="620" r="34" fill="#c9606f"/></g>
+  </svg>
+  <div class="arch cover-arch">
+    <div class="mono script">N<small>&amp;</small>I</div>
+    <p class="label">Wedding Invitation</p>
+    <h1 class="cover-names">NISA &amp; ILMAN</h1>
+    <p class="cover-date">22 • 11 • 2026</p>
+    <p class="tiny">Kepada Yth.</p>
+    <h3 id="guestName">Tamu Undangan</h3>
+    <button class="btn" id="openBtn">✉ BUKA UNDANGAN</button>
+  </div>
+</section>
+
+<button class="float-btn music-btn" id="musicBtn" aria-label="Musik">♫</button>
+<button class="float-btn top-btn" id="topBtn" aria-label="Ke atas">↑</button>
+<div class="petals" id="petals" aria-hidden="true"></div>
+<audio id="bgMusic" src="assets/musik.mp3" loop preload="none"></audio>
+
+<nav class="bottom-nav" id="bottomNav">
+  <a href="#beranda" data-sec="beranda"><i>⌂</i>Home</a>
+  <a href="#mempelai" data-sec="mempelai"><i>♥</i>Mempelai</a>
+  <a href="#acara" data-sec="acara"><i>✦</i>Acara</a>
+  <a href="#galeri" data-sec="galeri"><i>▣</i>Galeri</a>
+  <a href="#rsvp" data-sec="rsvp"><i>✎</i>RSVP</a>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <div class="hero-photo"></div>
+  <div class="hero-text reveal">
+    <p class="label">The Wedding of</p>
+    <h2 class="script big">Nisa &amp; Ilman</h2>
+    <p>Senin, 22 November 2026</p>
+  </div>
+</section>
+
+<!-- B. MEMPELAI -->
+<section class="section rose" id="mempelai">
+  <div class="panel center">
+    <h2 class="title light reveal">Bride &amp; Groom</h2>
+    <p class="salam reveal">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+    <p class="reveal">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.</p>
+    <div class="ayat reveal">
+      <p class="arab">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ</p>
+      <p class="arti">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untuk kamu dari jenis kamu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+      <p class="sumber">— QS. Ar-Rum: 21 —</p>
+    </div>
+
+    <div class="couple reveal">
+      <div class="oval"><img src="assets/mempelai-wanita.jpg" alt="Nisa"></div>
+      <h3 class="script name">Nisa</h3>
+      <h4>Siti Latifatun Nisa'</h4>
+      <p>Putri dari<br>Bapak Tamami (Alm.) &amp; Ibu Siti Musyarofah</p>
+    </div>
+    <div class="amp script reveal">&amp;</div>
+    <div class="couple reveal">
+      <div class="oval"><img src="assets/mempelai-pria.jpg" alt="Ilman"></div>
+      <h3 class="script name">Ilman</h3>
+      <h4>Muhammad Ilman Hanafi</h4>
+      <p>Putra dari<br>Bapak Kamirudin &amp; Ibu Siti Maryati</p>
+    </div>
+  </div>
+</section>
+
+<!-- C. ACARA + D. COUNTDOWN -->
+<section class="section rose" id="acara">
+  <h2 class="title light reveal">Wedding Event</h2>
+
+  <div class="arch event reveal">
+    <div class="flora top">🌸🌹🌸</div>
+    <h3 class="gold-t">Akad Nikah</h3>
+    <p class="tiny">Insya Allah akan dilaksanakan pada:</p>
+    <h4 class="script day">Sabtu</h4>
+    <p class="date">22 NOVEMBER 2026</p>
+    <p>Pukul 08.00 – 11.00 WIB</p>
+    <p class="pin">📍</p>
+    <p><b>KEDIAMAN ALM. BAPAK TAMAMI</b><br>Jl. Candipuro-Jabung Raya, Belimbing Sari, Kec. Jabung, Kabupaten Lampung Timur, Lampung 34385</p>
+    <a class="btn small" target="_blank" rel="noopener" href="https://maps.app.goo.gl/bNb5QVeVMiQzELwV6?g_st=ac">OPEN MAPS</a>
+    <div class="flora bottom">🌹🌸🌿</div>
+  </div>
+
+  <div class="arch event reveal">
+    <div class="flora top">🌸🌹🌸</div>
+    <h3 class="gold-t">Resepsi Pernikahan</h3>
+    <p class="tiny">Insya Allah akan dilaksanakan pada:</p>
+    <h4 class="script day">Senin</h4>
+    <p class="date">22 NOVEMBER 2026</p>
+    <p>Pukul 11.00 – selesai</p>
+    <p class="pin">📍</p>
+    <p><b>KEDIAMAN ALM. BAPAK TAMAMI</b><br>Belimbing Sari, Kec. Jabung, Kabupaten Lampung Timur, Lampung 34385</p>
+    <a class="btn small" target="_blank" rel="noopener" href="https://maps.app.goo.gl/bNb5QVeVMiQzELwV6?g_st=ac">OPEN MAPS</a>
+    <div class="flora bottom">🌹🌸🌿</div>
+  </div>
+
+  <h2 class="title light reveal">Counting The Days</h2>
+  <div class="countdown reveal">
+    <div><b id="cdDays">00</b><span>Hari</span></div>
+    <div><b id="cdHours">00</b><span>Jam</span></div>
+    <div><b id="cdMinutes">00</b><span>Menit</span></div>
+    <div><b id="cdSeconds">00</b><span>Detik</span></div>
+  </div>
+  <p class="center tiny light-t" id="cdNote"></p>
+</section>
+
+<!-- LIVE STREAMING (opsional, ganti link) -->
+
+<!-- E. LOVE STORY -->
+<section class="section rose" id="kisah">
+  <div class="panel">
+    <h2 class="title light center reveal">Love Story</h2>
+    <p class="center tiny reveal">Every love story is beautiful, but ours is my favorite</p>
+    <div class="timeline">
+      <div class="t-item reveal"><span class="dot"></span><small>2019</small><h4>First Meet</h4><p>Kami bertemu di sebuah acara kampus. Awalnya hanya saling menyapa, tanpa menyangka itu langkah pertama menuju takdir.</p></div>
+      <div class="t-item reveal"><span class="dot"></span><small>2021</small><h4>Relationship</h4><p>Obrolan demi obrolan membuat kami saling mengenal, berbagi mimpi, dan menemukan kenyamanan satu sama lain.</p></div>
+      <div class="t-item reveal"><span class="dot"></span><small>2025</small><h4>Engagement</h4><p>Dengan restu kedua keluarga, Ilman datang membawa niat baik untuk meminang Nisa.</p></div>
+      <div class="t-item reveal"><span class="dot"></span><small>2026</small><h4>Get Married</h4><p>Insya Allah, kami melangkah ke jenjang pernikahan dan memulai lembaran baru bersama.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- F. GALERI -->
+<section class="section blush center" id="galeri">
+  <h2 class="title reveal">Our Gallery</h2>
+  <div class="slider reveal" id="slider">
+    <div class="slider-track" id="sliderTrack"></div>
+    <button class="s-btn prev" id="sPrev" aria-label="Sebelumnya">‹</button>
+    <button class="s-btn next" id="sNext" aria-label="Berikutnya">›</button>
+    <div class="dots" id="sDots"></div>
+  </div>
+  <div class="grid reveal" id="galleryGrid">
+    <div class="g-item"><img src="assets/galeri1.jpg" alt="Galeri 1" loading="lazy"></div>
+    <div class="g-item"><img src="assets/galeri2.jpg" alt="Galeri 2" loading="lazy"></div>
+    <div class="g-item"><img src="assets/galeri3.jpg" alt="Galeri 3" loading="lazy"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Tutup">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+  <img id="lbImg" src="" alt="Foto">
+  <button class="lb-nav lb-next" id="lbNext">›</button>
+  <p class="lb-hint">Ketuk foto untuk zoom</p>
+</div>
+
+<!-- H. AMPLOP DIGITAL -->
+<section class="section rose center" id="hadiah">
+  <div class="white-card reveal">
+    <h2 class="title">Wedding Gift</h2>
+    <p class="tiny">Doa restu Anda adalah hadiah terbaik. Jika ingin memberi tanda kasih, dapat melalui:</p>
+  </div>
+  <div class="bank reveal">
+    <h4>DANA</h4><p class="tiny">Nomor Rekening</p>
+    <p class="rek" id="rek1">+62 856-6479-1883</p><p class="tiny">a.n. Siti Latifatun Nisa</p>
+    <button class="btn small copy-btn" data-target="rek1">⧉ Salin Rekening</button>
+  </div>
+  <div class="bank reveal">
+    <h4>DANA</h4><p class="tiny">Nomor Rekening</p>
+    <p class="rek" id="rek2">083818045077</p><p class="tiny">a.n. Muhammad Ilman Hanafi</p>
+    <button class="btn small copy-btn" data-target="rek2">⧉ Salin Rekening</button>
+  </div>
+  <div class="bank reveal">
+    <h4>QRIS</h4>
+    <img class="qris" src="assets/qris.png" alt="QRIS">
+    <p class="tiny">Pindai QRIS untuk mengirim hadiah digital</p>
+  </div>
+</section>
+
+<!-- G. RSVP & BUKU TAMU -->
+<section class="section blush center" id="rsvp">
+  <h2 class="title reveal">RSVP</h2>
+  <form class="form reveal" id="rsvpForm" autocomplete="off">
+    <label for="fName">Nama Tamu</label>
+    <input type="text" id="fName" maxlength="60" placeholder="Nama Anda" required>
+    <label for="fCount">Jumlah Kehadiran</label>
+    <select id="fCount"><option value="1">1 Orang</option><option value="2">2 Orang</option><option value="3">3 Orang</option><option value="4">4 Orang</option><option value="5">5 Orang</option></select>
+    <label for="fStatus">Status Kehadiran</label>
+    <select id="fStatus"><option>Hadir</option><option>Tidak Hadir</option><option>Masih Ragu</option></select>
+    <label for="fMsg">Ucapan &amp; Doa</label>
+    <textarea id="fMsg" rows="4" maxlength="300" placeholder="Tulis ucapan dan doa..." required></textarea>
+    <button type="submit" class="btn">Kirim</button>
+    <p class="form-info" id="formInfo"></p>
+  </form>
+  <p class="note reveal">ℹ️ Ucapan disimpan sementara dengan <b>localStorage</b> dan hanya tampil di <b>perangkat &amp; browser yang sama</b>. Tamu lain tidak melihatnya. Buku tamu bersama butuh server/database.</p>
+  <h2 class="title reveal">Best Wishes</h2>
+  <div class="guestbook" id="guestbook"></div>
+</section>
+
+<!-- I. PENUTUP -->
+<section class="section closing center" id="penutup">
+  <div class="reveal">
+    <p>Merupakan kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Terima kasih atas segala ucapan dan doa.</p>
+    <p class="doa">"Barakallahu laka wa baraka 'alaika wa jama'a bainakuma fii khair."<br><small>Semoga Allah memberkahimu, memberkahi atasmu, dan menyatukan kalian dalam kebaikan.</small></p>
+    <p class="tiny">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+    <h2 class="script big">Nisa &amp; Ilman</h2>
+    <button class="btn" id="shareBtn">💬 Bagikan via WhatsApp</button>
+    <p class="tiny foot">© 2026 The Wedding of Nisa &amp; Ilman</p>
+  </div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
